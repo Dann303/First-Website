@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery effects</title>
+    <style>
+        .bluebox{
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width: 300px;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            height: 100px;
+            width: auto;
+        }
+        .greenbox{
+            background-color: #31AF37;
+            height: 100px;
+            width: auto;
+        }
+        #great{
+            background-color: #5A3479;
+        }
+        p{
+            margin: 0;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+    
+<body>
+    <button id="fadeOutFacebook">Fade Out Facebook</button>
+    <button id="fadeInFacebook">Fade In Facebook</button>
+    <button id="fadeToggle">Fade Toggle</button>
+    <button id="animate">Animate</button>
+    
+    <div class="bluebox" id="facebook">
+        <p>Facebook is <span id="great">great.</span></p>
+    </div>
+    <div class="yellowbox" id="apple">
+        <p>Apple.</p>
+    </div>
+    <div class="greenbox" id="microsoft">
+        <p id="microsoftParagraph">Microsoft.</p>
+        <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link</a></p>
+    </div>
+    <p>Enter your name: <input></p>
+
+    
+    <script>
+        $(function(){
+            $("#fadeOutFacebook").click(function(){
+                $("#facebook").fadeOut(3000,function(){
+                    window.alert("Hi!");
+                }); //similar to hide() method but in slow motion. Parameters could be "slow"/"fast" or a duration in ms. Also (optional) a second parameter with a function to execute once faded out.
+            });
+            $("#fadeInFacebook").click(function(){
+                $("#facebook").fadeIn(); //same as show() and same concept as fadeOut().
+            });
+            $("#fadeToggle").click(function(){
+                $("#facebook").fadeToggle(3000); //time in ms 
+                $("#apple").fadeToggle(2000);  
+                $("#microsoft").fadeToggle(1000);  
+            });
+            
+//            $("#animate").click(function(){
+//                $("#facebook").animate({width:"200px", height:"50px", opacity:"0.5"},1000); //first parameter is the properties to change inside curly brackets, second parameter is the duration or speed that it takes to change to these properties. 
+//            });
+            
+            $("#animate").click(function(){
+                $("#facebook").animate({width:"200px"}, "slow");
+                $("#facebook").animate({height:"300px"}, "slow");
+                $("#facebook").animate({height:"100px"}, "slow");
+                $("#facebook").delay(3000).animate({width:"300px"}, "slow");
+            }); //delay is used to delay animation by a period in ms.
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

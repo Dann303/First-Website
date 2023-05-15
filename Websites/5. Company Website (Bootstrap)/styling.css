@@ -1,0 +1,94 @@
+/*Style body by adding background image and set it to cover, add font-family*/
+body{
+    background: url(images/millionstars.jpg) no-repeat center center fixed;
+/*    background-attachment: fixed; either this or fixed in the previous line*/
+    background-size: cover;    
+    font-family: Arvo, serif;
+}
+
+/*Style brand*/
+.logo{
+    height: 30px;
+    width: 30px;
+}
+
+/*Style navigation bar*/
+.navbar-inverse{
+    background: rgba(0,0,0, 0.5);
+}
+.nav li{
+    margin-right: 35px;
+    padding: 10px 0;
+    color: white;
+    font-size: 17px;
+    background-color: rgba(0,0,0, 0);
+}
+nav li:hover{
+    background-color: rgb(0,0,0, 0.5);
+    border-bottom: 1px solid #08ceab;
+    padding-bottom: 9px;
+    cursor: pointer;
+}
+
+/*Style jumbotron*/
+.jumbotron{
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    margin: 0;
+    padding: 10px;
+    letter-spacing: 2.5px;
+}
+
+/*Limit the width of the icons section*/
+.container{
+    max-width: 1000px;
+}
+
+/*Style icons section using bootstrap grid system*/
+.iconImages{
+    height: 100px;
+}
+.col-md-4{
+    text-align: center;
+    color: #fff;
+}
+.icons p{
+    font-size: 15px;
+}
+
+/*Style contact button*/
+.contact{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.btn{
+    background-color: rgba(0, 255, 184, 0.5);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    padding: 10px 70px;
+    letter-spacing: 1.3px;
+}
+.btn:hover{
+    background-color: rgba(0,0,0, 0.5);
+    color: white;
+    border: none;
+}
+
+/*Style footer*/
+.footer{
+    background-color: rgba(0,0,0, 0.5);
+    color: grey;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+/*Use media queries to change icons size in small devices*/
+@media (max-width: 768px){
+    .iconImages{
+        height: 70px;
+    }
+}

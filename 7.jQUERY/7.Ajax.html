@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ajax</title>
+    <style>
+        .bluebox{
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width: 300px;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            height: 100px;
+            width: auto;
+        }
+        .greenbox{
+            background-color: #31AF37;
+            height: 100px;
+            width: auto;
+        }
+        #great{
+            background-color: #5A3479;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+    
+<body>
+    <button>Button</button>
+    
+    <div class="bluebox" id="facebook">
+        <p>Facebook is <span id="great">great.</span></p>
+    </div>
+    <div class="yellowbox" id="apple">
+        <p>Apple.</p>
+    </div>
+    <div class="greenbox" id="microsoft">
+        <p id="microsoftParagraph">Microsoft.</p>
+        <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link</a></p>
+    </div>
+    <p>Enter your name: <input></p>
+    
+    
+    <script>
+        $(function(){
+            $("#facebook").load("ajax/somedata.txt");
+            $("#apple").load("ajax/somedata.txt #paragraph1");
+            
+            
+//            $("button").click(function(){
+//                $.ajax({url : "ajax/somedata.txt", success : function(data){
+//                    $("#microsoft").html(data); //load data if success into varialbe 'data', then change the html content of the element with the id microsoft to the content of variable 'data'.
+//                }
+//                });
+//            });
+            
+            $("button").click(function(){
+                $.ajax({url : "ajax/somedata.txt"}).done(function(somedata){
+                    $("#microsoft").html(somedata);
+                }
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+<!--ajax stands for Asynchronous JavaScript And XML-->
+<!--used to exchange data between a webpage and a server-->
+<!--used to change parts of the webpage without having to reload the page-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

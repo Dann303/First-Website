@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Date Picker</title>
+    <style>
+        .bluebox{
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            height: 100px;
+            width: auto;
+        }
+        .greenbox{
+            background-color: #31AF37;
+            height: 100px;
+            width: auto;
+        }
+        #great{
+            background-color: #5A3479;
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css"> <!--changed from 1.12.1 to 1.11.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> //changed from 1.12.1 to 1.11.1
+    </script>
+</head>
+    
+<body>
+    
+    <div class="bluebox ui-corner-all" id="facebook">
+        <p>Flight departure date: <input id="departure"></p>
+        <p>Flight return date: <input id="return"></p>
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+        <p>Apple.</p>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+        <p>Microsoft.</p>
+    </div>
+    <script>
+        
+        $(function(){
+            $("#departure").datepicker({
+                showAnim: "fadeIn",
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat: "DD, M d y",
+                showOn: "button",
+                buttonImage: "images/calendar.jpg",
+                buttonImageOnly: true,
+                buttonText: "Choose your departure date.",
+                minDate: +1,
+                maxDate: "+12M + 10D + 1Y",
+                onClose: function(selectedDate){
+                    $("#return").datepicker("option","minDate",selectedDate);
+                },
+                showWeek: true
+            });
+            $("#return").datepicker({
+                dateFormat: "DD, M d y"
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

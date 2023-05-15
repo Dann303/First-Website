@@ -1,0 +1,246 @@
+body{
+/*    background-image: url(1.HTML/images/image3.jpg);*/
+    font-family: cursive;
+    background: linear-gradient(to bottom left, #521010, #D3AEE9);
+    background-size: cover;
+}
+
+.list a, .projects ul a{
+    text-decoration: none;
+    position: relative;
+}
+a:hover{
+    font-size: 30px;
+    -webkit-animation: a1 3s;
+    -moz-animation: a1 3s;
+    -o-animation: a1 3s;
+}
+a:visited{
+    color: #100069;
+}
+
+
+#theTitle{
+    font-family: arial;
+    color: #126764;
+    font-size: 2.5em;
+}
+
+#beginning{
+    color: rgba(0,0,0,0.5);
+    margin-left: 10px;
+    width: 75%;
+}
+
+#myPhoto{
+    width: 400px;
+    float: right;
+    right: 100px;
+    padding: 0;
+}
+#myPhoto img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+#caption{
+    margin-top: 20px;
+    text-align: center;
+    
+}
+
+.heading{
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: #056B83;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+.subHeading{
+    font-size: 21px;
+    color: rgb(0,57,81);
+    margin: 10px 0;
+}
+
+
+@-moz-keyframes a1{
+    0% {left: 0}
+    50% {left: 30px}
+    100% {left: 0}
+}
+@-moz-keyframes a2{
+    0% {top: 0}
+    25% {top: 3px}
+    50% {top: 0}
+    75% {top: -3px}
+    100% {top: 0}
+}
+@-o-keyframes a1{
+    0% {left: 0}
+    50% {left: 30px}
+    100% {left: 0}
+}
+@-o-keyframes a2{
+    0% {top: 0}
+    25% {top: 3px}
+    50% {top: 0}
+    75% {top: -3px}
+    100% {top: 0}
+}
+@-webkit-keyframes a1{
+    0% {left: 0}
+    50% {left: 30px}
+    100% {left: 0}
+}
+@-webkit-keyframes a2{
+    0% {top: 0}
+    25% {top: 3px}
+    50% {top: 0}
+    75% {top: -3px}
+    100% {top: 0}
+}
+
+.projects{
+    margin: 20px 0;
+}
+.projects h3{
+    font-size: 32px;
+    margin-bottom: 10px;
+    height: 30px;
+    color: #100069 
+}
+.projects ul li{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.content{
+    height: auto;
+    width: auto;
+    padding-left: 30px;
+    margin-top: 50px;
+}
+
+
+.list{
+    position: relative;
+}
+.list button, .list li button {
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.list  div  ul{
+    margin-bottom: 0;    
+}
+.list button h3, .list li button h4{
+    margin-top: 0;
+}
+.list a{
+    color: black;
+}
+.list:hover{
+    -webkit-animation: a2 2s;
+    -moz-animation: a2 2s;
+    -o-animation: a2 2s;
+}
+
+.projects ul a{
+    color: #DCCB27;
+}
+
+#end{
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0.8;
+    color: darkturquoise;
+    padding-left: 40px;
+}
+
+@media (max-width:1250px){
+    #myPhoto{
+        width: 300px;
+        right: 50px;
+        top: 50px;
+    }
+}
+@media (max-width:945px){
+    #myPhoto{
+        width: 200px;
+    }
+}
+@media (max-width:650px){
+    #myPhoto{
+        width: 150px;
+        right: 25px;
+        top: 25px;
+    }
+    .projects h3{
+        font-size: 30px;
+    }
+    .projects ul li{
+        font-size: 18px;
+    }
+    .heading{
+        font-size: 18px;
+    }
+    .subHeading{
+        font-size: 16px;
+    }
+    #end{
+        padding-left: 25px;
+        font-size: 14px;
+    }
+    .content{
+        padding-left: 20px;
+    }
+    .list li{
+        font-size: 12px;
+        padding-bottom: 2px;
+    }
+    a:hover{
+    font-size: 20px;
+    -webkit-animation: a1 3s;
+    -moz-animation: a1 3s;
+    -o-animation: a1 3s;
+}
+    
+}
+@media (max-width:480px){
+    #myPhoto{
+        width: 145px;
+        right: 20px;
+        top: 20px;
+        font-size: 10px;
+    }
+    .projects h3{
+        font-size: 25px;
+    }
+    .projects ul li{
+        font-size: 15px;
+    }
+    .heading{
+        font-size: 17px;
+    }
+    .subHeading{
+        font-size: 14px;
+    }
+    #end{
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    .content{
+        padding-left: 5px;
+    }
+    .list li{
+        font-size: 10px;
+        padding-bottom: 1px;
+    }
+}

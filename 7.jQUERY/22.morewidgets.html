@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>More Widgets</title>
+    <style>
+        .bluebox{
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            height: auto;
+            width: auto;
+        }
+        .greenbox{
+            background-color: #31AF37;
+            height: 100px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+        
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css"> <!--changed from 1.12.1 to 1.11.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> //changed from 1.12.1 to 1.11.1
+    </script>
+</head>
+    
+<body>
+    
+    <div class="bluebox ui-corner-all" id="facebook">
+        <label for="myInput">Enter a value:</label>
+        <input id="myInput" name="myInput" value="30" title="Please enter a value">
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+        <ul>
+            <li><a href="#tab1">tab 1</a></li>
+            <li><a href="#tab2">tab 2</a></li>
+            <li><a href="#tab3">tab 3</a></li>
+        </ul>
+        <div id="tab1"><p>content 1</p></div>
+        <div id="tab2"><p>content 2</p></div>
+        <div id="tab3"><p>content 3</p></div>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft" title="Microsoft">
+        <p>Microsoft.</p>
+    </div>
+    
+    <script>
+        
+        $(function(){
+            $("#myInput").spinner({
+               min: 0,
+               max: 100,
+               step: 5
+           }); 
+            
+            $("#apple").tabs({
+                collapsible: true,
+                event: "mouseover",
+            });
+            $("#apple").tabs().find(".ui-tabs-nav").sortable({
+                axis: "x",
+            });
+//            $(document).tooltip(); //This causes every element with a title to pop up as a tooltip.
+            $("#myInput").tooltip({
+                show: {effect: "explode"} //"slideDown"
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

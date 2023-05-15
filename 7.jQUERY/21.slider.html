@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Slider</title>
+    <style>
+        .bluebox{
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            height: 100px;
+            width: auto;
+        }
+        .greenbox{
+            background-color: #31AF37;
+            height: 100px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+        #sliderValue, #mileageRange{
+            color: #2074CF;
+            border: 0;
+            font-weight: bold;
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css"> <!--changed from 1.12.1 to 1.11.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> //changed from 1.12.1 to 1.11.1
+    </script>
+</head>
+    
+<body>
+    
+    <div class="bluebox ui-corner-all" id="facebook">
+        <p>Facebook.</p>
+        </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+        <p>Apple.</p>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+        <p>Microsoft.</p>
+    </div>
+    
+    <div id="slider"></div>
+    <label for="slider">Value:</label>
+    <input type="text" id="sliderValue" readonly>    
+    
+    <div id="rangeSlider"></div>
+    <label for="rangeSlider">Mileage:</label>
+    <input type="text" id="mileageRange" readonly>
+    
+    <script>
+        
+        $(function(){
+            $("#slider").slider({
+                slide: function(event,ui){
+                    $("#sliderValue").val(ui.value);
+                },
+                min: 0,
+                max: 25
+            });
+            $("#sliderValue").val(0);
+            $("#rangeSlider").slider({
+                range: true,
+                min: 0,
+                max: 100000,
+                step: 1000,
+                values: [0, 10000],
+                slide: function(event,ui){
+                    $("#mileageRange").val(ui.values[0] + " miles - " + ui.values[1] + " miles"); //instead of ui.values[0] and ui.values[1] you could write $("#rangeSlider").slider("values",0) and $("#rangeSlider").slider("values",1)
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

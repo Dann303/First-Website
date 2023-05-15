@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Regular Expression</title>
+</head>
+
+<body>
+<p>String: <span id="string"></span></p>
+<p>Pattern: <span id="pattern"></span></p>
+<p>Result(search): <span id="search"></span></p>
+<p>Result(match): <span id="match"></span></p>
+<p>Result(test): <span id="test"></span></p>
+
+    
+<script>
+var str = "Atlanta \n5783 75%";
+//var pattern = /[a-z]/g; //characters in range
+//var pattern = /[^atn]/g; //anything but this sequence
+//var pattern = /[4-7]/g;  //range of numbers
+//var pattern = /\d/g;  //digits
+//var pattern = /\w/g;  //alphanumeric characters
+//var pattern = /\W/g; //non alphanumeric characters
+//var pattern = /\s/g;  //spaces
+//var pattern = /\d{4}/g; //lets look for n digits
+//var pattern = /^A/g; //search for character x as the first letter
+var pattern = /\n/g; //search for a line break \n
+//var pattern = new RegExp("a","g");
+    
+document.getElementById("string").innerHTML = str;
+document.getElementById("pattern").innerHTML = pattern;
+document.getElementById("search").innerHTML = str.search(pattern);
+document.getElementById("match").innerHTML = str.match(pattern);
+document.getElementById("test").innerHTML = pattern.test(str);
+
+</script>    
+</body>
+
+</html>

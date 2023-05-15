@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Accordion</title>
+    <style>
+        .bluebox{
+            background-color: #3A5795;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            height: 100px;
+            width: auto;
+        }
+        .greenbox{
+            background-color: #31AF37;
+            height: 100px;
+            width: auto;
+        }
+        #great{
+            background-color: #5A3479;
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    </script>
+</head>
+    
+<body>
+    
+    <div id="resizer" class="ui-widget-container">
+        <div class="bluebox ui-corner-all" id="facebook">
+        <h3>Section 1</h3>
+        <div>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            <p>Content 1</p>
+            <p>Content 1</p>
+        </div>
+        <h3>Section 2</h3>
+        <div><p>Content 2</p></div>
+        <h3>Section 3</h3>
+        <div><p>Content 3</p></div>
+    </div>
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+        <p>Apple.</p>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+        <p>Microsoft.</p>
+        <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link</a></p>
+    </div>
+    
+    <script>
+        
+        $(function(){
+            $("#facebook").accordion({
+                collapsible: true,
+                icons: {
+                    header: "ui-icon-circle-arrow-e",
+                    activeHeader: "ui-icon-circle-arrow-s"
+                },
+                heightStyle: "fill"
+            });
+            
+            $("#resizer").resizable({
+                resize: function(){
+                    $("#facebook").accordion("refresh");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
